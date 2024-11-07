@@ -71,6 +71,65 @@ h1 {
     opacity: 0.7;
 }
 
+/* Slider Styles */
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 2rem 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 1rem;
+}
+
+.slide h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.slide p {
+    font-size: 1rem;
+    color: #e6e6e6;
+    line-height: 1.5;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+}
+
+.slider-nav button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.slider-nav button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
 @media (max-width: 768px) {
     .content {
         grid-template-columns: 1fr;
@@ -81,5 +140,9 @@ h1 {
     .text-content {
         order: 2;
         margin: 0 auto;
+    }
+    
+    .slider-container {
+        margin: 1rem 0;
     }
 }
